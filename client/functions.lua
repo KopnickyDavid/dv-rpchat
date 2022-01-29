@@ -118,7 +118,6 @@ function DrawText3Dme(x,y,z, text)
       end
   end
 
-,
 function DrawText3Ddo(x,y,z, text)
   local onScreen, _x, _y = World3dToScreen2d(x, y, z)
   local p = GetGameplayCamCoords()
