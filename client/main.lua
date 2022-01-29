@@ -1,5 +1,5 @@
-RegisterNetEvent('esx_rpchat:sendMe')
-AddEventHandler('esx_rpchat:sendMe', function(playerId, title, message, color)
+RegisterNetEvent('qb_rpchat:sendMe')
+AddEventHandler('qb_rpchat:sendMe', function(playerId, title, message, color)
 	local source = PlayerId()
 	local target = GetPlayerFromServerId(playerId)
 
@@ -16,8 +16,8 @@ AddEventHandler('esx_rpchat:sendMe', function(playerId, title, message, color)
   end
 end)
 
-RegisterNetEvent('esx_rpchat:sendDo')
-AddEventHandler('esx_rpchat:sendDo', function(playerId, title, message, color)
+RegisterNetEvent('qb_rpchat:sendDo')
+AddEventHandler('qb_rpchat:sendDo', function(playerId, title, message, color)
 	local source = PlayerId()
 	local target = GetPlayerFromServerId(playerId)
 
@@ -34,8 +34,8 @@ AddEventHandler('esx_rpchat:sendDo', function(playerId, title, message, color)
   end
 end)
 
-RegisterNetEvent('esx_rpchat:sendLocalOOC')
-AddEventHandler('esx_rpchat:sendLocalOOC', function(playerId, title, message, color)
+RegisterNetEvent('qb_rpchat:sendLocalOOC')
+AddEventHandler('qb_rpchat:sendLocalOOC', function(playerId, title, message, color)
 	local source = PlayerId()
 	local target = GetPlayerFromServerId(playerId)
 
@@ -52,14 +52,14 @@ AddEventHandler('esx_rpchat:sendLocalOOC', function(playerId, title, message, co
   end
 end)
 
-RegisterNetEvent('esx_rpchat:getCoords')
-AddEventHandler('esx_rpchat:getCoords', function(player)
+RegisterNetEvent('qb_rpchat:getCoords')
+AddEventHandler('qb_rpchat:getCoords', function(player)
 	local ped = PlayerPedId()
     local coords = GetEntityCoords(ped, false)
     local heading = GetEntityHeading(ped)
 
     local message = tostring("X: " .. coords.x .. " Y: " .. coords.y .. " Z: " .. coords.z .. " HEADING: " .. heading)
-    TriggerServerEvent('esx_rpchat:showCoord', player, message)
+    TriggerServerEvent('qb_rpchat:showCoord', player, message)
 
 end)
 
