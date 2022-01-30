@@ -45,7 +45,7 @@ AddEventHandler('qb_rpchat:sendLocalOOC', function(playerId, title, message, col
 	if targetPed == source or #(sourceCoords - targetCoords) < 20 then
 		TriggerEvent('chat:addMessage', {
       template = '<div style="padding: 0.45vw; margin: 0.05vw; background-color: rgba(99, 99, 99, 0.3); border-radius: 10px;"><i class="fas fa-street-view"></i> {0}: {1}</div>',
-        args = { '[' ..playerId .. ']-OOC ', message }
+        args = { '[' ..playerId .. ']L-OOC ', message }
     })
 	end
   end
