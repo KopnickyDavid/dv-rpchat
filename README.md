@@ -1,17 +1,20 @@
-# QB RPCHAT 
-This is roleplay chat for QBCore.
-This chat use some 3D commands.
+
+# [QB]DV-RPCHAT
+Script that adds more commands to roleplay.
+<p>
+  Original : https://github.com/N0BODY2/chat
+</p>
+<h2> Features:</h2>
+<p>
+/me,/do,/doc,/gps,/bm,/ooc,/try,/coin,/twt,/anontwt,/ad,/pd,/sd,/ems,/here
+</p>
+<p>
+Sync across all players
+</p>
+<p>
+A lot of Config options
+</p>
 
 
- <p>
-Original : https://github.com/esx-framework/esx_rpchat
-</p>
-<p>
-Base of this : https://github.com/N0BODY2/chat
-</p>
-<p>
-/try command : KUMApt#0001
-</p>
-<p>
-I converted it and added/fixed a lot of things already.
-</p>
+
+<h1>Crated by Davee|Discord support:https://discord.gg/hT8bahGHCb<h1>
