@@ -1,5 +1,4 @@
-RegisterNetEvent('qb_rpchat:sendMe')
-AddEventHandler('qb_rpchat:sendMe', function(playerId, title, message, color)
+RegisterNetEvent('qb_rpchat:sendMe', function(playerId, title, message, color)
 	local source = PlayerId()
 	local target = GetPlayerFromServerId(playerId)
 
@@ -16,8 +15,8 @@ AddEventHandler('qb_rpchat:sendMe', function(playerId, title, message, color)
   end
 end)
 
-RegisterNetEvent('qb_rpchat:sendDo')
-AddEventHandler('qb_rpchat:sendDo', function(playerId, title, message, color)
+
+RegisterNetEvent('qb_rpchat:sendDo', function(playerId, title, message, color)
 	local source = PlayerId()
 	local target = GetPlayerFromServerId(playerId)
 
@@ -33,11 +32,9 @@ AddEventHandler('qb_rpchat:sendDo', function(playerId, title, message, color)
 	end
   end
 end)
-RegisterNetEvent('qb_rpchat:sendLocalOOC')
-AddEventHandler('qb_rpchat:sendLocalOOC', function(playerId, title, message, color)
+RegisterNetEvent('qb_rpchat:sendLocalOOC', function(playerId, title, message, color)
 	local source = PlayerId()
 	local target = GetPlayerFromServerId(playerId)
-
 	if target ~= -1 then
 	local sourcePed, targetPed = PlayerPedId(), GetPlayerPed(target)
 	local sourceCoords, targetCoords = GetEntityCoords(sourcePed), GetEntityCoords(targetPed)
@@ -51,17 +48,15 @@ AddEventHandler('qb_rpchat:sendLocalOOC', function(playerId, title, message, col
   end
 end)
 
-RegisterNetEvent('qb_rpchat:getCoords')
-AddEventHandler('qb_rpchat:getCoords', function(player)
+
+RegisterNetEvent('qb_rpchat:getCoords', function(data)
 	local ped = PlayerPedId()
     local coords = GetEntityCoords(ped, false)
     local heading = GetEntityHeading(ped)
 
     local message = tostring("X: " .. coords.x .. " Y: " .. coords.y .. " Z: " .. coords.z .. " HEADING: " .. heading)
     TriggerServerEvent('qb_rpchat:showCoord', player, message)
-
 end)
-
 AddEventHandler('onResourceStop', function(resource)
 	if resource == GetCurrentResourceName() then
 		TriggerEvent('chat:removeSuggestion', '/tweet')

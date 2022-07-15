@@ -1,16 +1,19 @@
-fx_version 'adamant'
+fx_version 'cerulean'
 ---created by Mr.NOBODY#6666
----edited/converted by Davitko ve stylu.#3722
+---edited/converted by Davee#3722
 game 'gta5'
+author 'Davee#3722'
+description 'Roleplay chat for QB.'
+version '2.0'
+
+shared_scripts {
+	'config.lua',
+}
 
 server_scripts {
-
-	'config.lua',
-	'server/*.lua'
+	'server/*.lua',
 }
 
 client_scripts {
-
-	'config.lua',
-	'client/*.lua'
+	'client/*.lua',
 }

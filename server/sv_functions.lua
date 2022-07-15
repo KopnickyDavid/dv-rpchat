@@ -7,21 +7,21 @@ function GetCharacterName(source)
           return Player.PlayerData.charinfo.firstname..' '..Player.PlayerData.charinfo.lastname
       end
   end
-  function GetPlayerName(source)
+function GetPlayerName(source)
     local Player = QBCore.Functions.GetPlayer(source)
         if Player then
-            return Player.PlayerData.charinfo.firstname
-        end
+        return Player.PlayerData.charinfo.firstname
     end
-    function GetLastName(source)
+end
+function GetLastName(source)
         local Player = QBCore.Functions.GetPlayer(source)
             if Player then
-                return Player.PlayerData.charinfo.lastname
-            end
-        end
-        function GetJobName(source)
-            local Player = QBCore.Functions.GetPlayer(source)
-                if Player then
-                    return Player.PlayerData.job.label
-                end
-            end
+        return Player.PlayerData.charinfo.lastname
+    end
+end
+function GetJobName(source)
+        local Player = QBCore.Functions.GetPlayer(source)
+            if Player then
+        return Player.PlayerData.job.label
+    end
+end
